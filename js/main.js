@@ -3,7 +3,10 @@ const now = document.querySelector('#now');
 const quotes = document.querySelector('#quotes');
 const inspiration = document.querySelector('#inspiration');
 const ideas = document.querySelector('#ideas');
+// TODO: Handle CV download portion
+const cv = document.querySelector('#CV');
 const contact = document.querySelector('#contact');
+
 
 const aboutContent = document.querySelector('#about-content');
 const nowContent = document.querySelector('#now-content');
