@@ -52,7 +52,7 @@ nav ul {
   align-items: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   nav ul {
     flex-direction: column;
   }
@@ -64,13 +64,9 @@ nav ul li {
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 500px;
+  margin: 3rem auto 0;
+  padding: 3rem;
 }
 
 .wb-body {
