@@ -54,7 +54,8 @@ nav ul {
 
 @media screen and (max-width: 500px) {
   nav ul {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
