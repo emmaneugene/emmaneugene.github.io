@@ -46,10 +46,6 @@ p {
   margin: 20px 0;
 }
 
-nav {
-  width: 40%;
-}
-
 nav ul {
   display: flex;
   justify-content: space-around;
