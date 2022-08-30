@@ -80,7 +80,7 @@ quotes.addEventListener('click', () => {
 
 vitality.addEventListener('click', () => {
   const contactBox = new WinBox({
-    title: 'vitality',
+    title: 'Vitality',
     width: '400px',
     height: '400px',
     x: 350,
