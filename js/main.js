@@ -1,7 +1,7 @@
 const about = document.querySelector('#about');
 const now = document.querySelector('#now');
 const quotes = document.querySelector('#quotes');
-const inspiration = document.querySelector('#inspiration');
+const vitality = document.querySelector('#vitality');
 const ideas = document.querySelector('#ideas');
 // TODO: Handle CV download portion
 const cv = document.querySelector('#CV');
@@ -11,7 +11,7 @@ const contact = document.querySelector('#contact');
 const aboutContent = document.querySelector('#about-content');
 const nowContent = document.querySelector('#now-content');
 const quotesContent = document.querySelector('#quotes-content');
-const inspirationContent = document.querySelector('#inspiration-content');
+const vitalityContent = document.querySelector('#vitality-content');
 const ideasContent = document.querySelector('#ideas-content');
 const contactContent = document.querySelector('#contact-content');
 
@@ -78,9 +78,9 @@ quotes.addEventListener('click', () => {
   })
 })
 
-inspiration.addEventListener('click', () => {
+vitality.addEventListener('click', () => {
   const contactBox = new WinBox({
-    title: 'Inspiration',
+    title: 'vitality',
     width: '400px',
     height: '400px',
     x: 350,
@@ -89,7 +89,7 @@ inspiration.addEventListener('click', () => {
     right: 50,
     bottom: 50,
     left: 50,
-    mount: inspirationContent,
+    mount: vitalityContent,
     onfocus: function () {
       this.setBackground('#00aa00')
     },
