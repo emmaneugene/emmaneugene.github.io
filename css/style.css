@@ -44,6 +44,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: auto;
+}
+
 p {
   margin: 20px 0;
 }
