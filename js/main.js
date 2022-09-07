@@ -13,6 +13,9 @@ const vitalityContent = document.querySelector('#vitality-content');
 const ideasContent = document.querySelector('#ideas-content');
 const contactContent = document.querySelector('#contact-content');
 
+const activeBgColor = '#c28a11';
+const inactiveBgColor = '#777'
+
 about.addEventListener('click', () => {
   const aboutBox = new WinBox({
     title: 'About Me',
@@ -26,10 +29,10 @@ about.addEventListener('click', () => {
     left: 50,
     mount: aboutContent,
     onfocus: function () {
-      this.setBackground('#00aa00')
+      this.setBackground(activeBgColor)
     },
     onblur: function () {
-      this.setBackground('#777')
+      this.setBackground(inactiveBgColor)
     },
   })
 })
@@ -47,10 +50,10 @@ now.addEventListener('click', () => {
     left: 50,
     mount: nowContent,
     onfocus: function () {
-      this.setBackground('#00aa00')
+      this.setBackground(activeBgColor)
     },
     onblur: function () {
-      this.setBackground('#777')
+      this.setBackground(inactiveBgColor)
     },
   })
 })
@@ -68,10 +71,10 @@ quotes.addEventListener('click', () => {
     left: 50,
     mount: quotesContent,
     onfocus: function () {
-      this.setBackground('#00aa00')
+      this.setBackground(activeBgColor)
     },
     onblur: function () {
-      this.setBackground('#777')
+      this.setBackground(inactiveBgColor)
     },
   })
 })
@@ -89,10 +92,10 @@ vitality.addEventListener('click', () => {
     left: 50,
     mount: vitalityContent,
     onfocus: function () {
-      this.setBackground('#00aa00')
+      this.setBackground(activeBgColor)
     },
     onblur: function () {
-      this.setBackground('#777')
+      this.setBackground(inactiveBgColor)
     },
   })
 })
@@ -110,10 +113,10 @@ ideas.addEventListener('click', () => {
     left: 50,
     mount: ideasContent,
     onfocus: function () {
-      this.setBackground('#00aa00')
+      this.setBackground(activeBgColor)
     },
     onblur: function () {
-      this.setBackground('#777')
+      this.setBackground(inactiveBgColor)
     },
   })
 })
@@ -131,10 +134,10 @@ contact.addEventListener('click', () => {
     left: 50,
     mount: contactContent,
     onfocus: function () {
-      this.setBackground('#00aa00')
+      this.setBackground(activeBgColor)
     },
     onblur: function () {
-      this.setBackground('#777')
+      this.setBackground(inactiveBgColor)
     },
   })
 })
