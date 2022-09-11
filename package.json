@@ -1,0 +1,20 @@
+{
+  "name": "emmaneugene.github.io",
+  "version": "1.0.0",
+  "description": "Files for my personal portfolio site, hosted on Github Pages with html, css and vanilla JS as well as the [WinBox](https://github.com/nextapps-de/winbox) library.",
+  "main": "index.js",
+  "scripts": {
+    "build": "uglifyjs js/main.js > js/main.min.js; minify css/style.css > css/style.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmaneugene/emmaneugene.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmaneugene/emmaneugene.github.io/issues"
+  },
+  "homepage": "https://github.com/emmaneugene/emmaneugene.github.io#readme"
+}
