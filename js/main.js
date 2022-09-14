@@ -1,5 +1,6 @@
 const about = document.querySelector('#about');
 const now = document.querySelector('#now');
+const ethos = document.querySelector('#ethos');
 const quotes = document.querySelector('#quotes');
 const vitality = document.querySelector('#vitality');
 const ideas = document.querySelector('#ideas');
@@ -8,6 +9,7 @@ const contact = document.querySelector('#contact');
 
 const aboutContent = document.querySelector('#about-content');
 const nowContent = document.querySelector('#now-content');
+const ethosContent = document.querySelector('#ethos-content');
 const quotesContent = document.querySelector('#quotes-content');
 const vitalityContent = document.querySelector('#vitality-content');
 const ideasContent = document.querySelector('#ideas-content');
@@ -16,129 +18,72 @@ const contactContent = document.querySelector('#contact-content');
 const activeBgColor = '#c28a11';
 const inactiveBgColor = '#777'
 
-about.addEventListener('click', () => {
-  const aboutBox = new WinBox({
+config = [
+  {
+    selector: about,
     title: 'About Me',
-    width: '400px',
-    height: '400px',
-    x: '5%',
     y: '5%',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: aboutContent,
-    onfocus: function () {
-      this.setBackground(activeBgColor)
-    },
-    onblur: function () {
-      this.setBackground(inactiveBgColor)
-    },
-  })
-})
-
-now.addEventListener('click', () => {
-  const aboutBox = new WinBox({
+    mount: aboutContent
+  },
+  {
+    selector: now,
     title: 'Now',
-    width: '400px',
-    height: '400px',
-    x: '5%',
     y: '10%',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: nowContent,
-    onfocus: function () {
-      this.setBackground(activeBgColor)
-    },
-    onblur: function () {
-      this.setBackground(inactiveBgColor)
-    },
-  })
-})
-
-quotes.addEventListener('click', () => {
-  const contactBox = new WinBox({
-    title: 'Quotes',
-    width: '400px',
-    height: '400px',
-    x: '5%',
+    mount: nowContent
+  },
+  {
+    selector: ethos,
+    title: 'Ethos',
     y: '15%',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: quotesContent,
-    onfocus: function () {
-      this.setBackground(activeBgColor)
-    },
-    onblur: function () {
-      this.setBackground(inactiveBgColor)
-    },
-  })
-})
-
-vitality.addEventListener('click', () => {
-  const contactBox = new WinBox({
-    title: 'Vitality',
-    width: '400px',
-    height: '400px',
-    x: '5%',
+    mount: ethosContent
+  },
+  {
+    selector: quotes,
+    title: 'Quotes',
     y: '20%',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: vitalityContent,
-    onfocus: function () {
-      this.setBackground(activeBgColor)
-    },
-    onblur: function () {
-      this.setBackground(inactiveBgColor)
-    },
-  })
-})
-
-ideas.addEventListener('click', () => {
-  const contactBox = new WinBox({
-    title: 'Ideas',
-    width: '400px',
-    height: '400px',
-    x: '5%',
+    mount: quotesContent
+  },
+  {
+    selector: vitality,
+    title: 'Vitality',
     y: '25%',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: ideasContent,
-    onfocus: function () {
-      this.setBackground(activeBgColor)
-    },
-    onblur: function () {
-      this.setBackground(inactiveBgColor)
-    },
-  })
-})
-
-contact.addEventListener('click', () => {
-  const contactBox = new WinBox({
-    title: 'Contact Me',
-    width: '400px',
-    height: '400px',
-    x: '5%',
+    mount: vitalityContent
+  },
+  {
+    selector: ideas,
+    title: 'Ideas',
     y: '30%',
-    top: 50,
-    right: 50,
-    bottom: 50,
-    left: 50,
-    mount: contactContent,
-    onfocus: function () {
-      this.setBackground(activeBgColor)
-    },
-    onblur: function () {
-      this.setBackground(inactiveBgColor)
-    },
+    mount: ideasContent
+  },
+  {
+    selector: contact,
+    title: 'Contact',
+    y: '35%',
+    mount: contactContent
+  },
+]
+
+config.forEach(element => {
+  element['selector'].addEventListener('click', () => {
+    const box = new WinBox({
+      title: element['title'],
+      width: '400px',
+      height: '400px',
+      x: '5%',
+      y: element['y'],
+      top: 50,
+      right: 50,
+      bottom: 50,
+      left: 50,
+      mount: element['mount'],
+      onfocus: function () {
+        this.setBackground(activeBgColor)
+      },
+      onblur: function () {
+        this.setBackground(inactiveBgColor)
+      },
+    })
   })
-})
+});
+
 
