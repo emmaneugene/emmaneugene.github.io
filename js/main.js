@@ -1,6 +1,6 @@
 const about = document.querySelector('#about');
 const now = document.querySelector('#now');
-const ethos = document.querySelector('#ethos');
+const work = document.querySelector('#work');
 const quotes = document.querySelector('#quotes');
 const vitality = document.querySelector('#vitality');
 const ideas = document.querySelector('#ideas');
@@ -9,7 +9,7 @@ const contact = document.querySelector('#contact');
 
 const aboutContent = document.querySelector('#about-content');
 const nowContent = document.querySelector('#now-content');
-const ethosContent = document.querySelector('#ethos-content');
+const workContent = document.querySelector('#work-content');
 const quotesContent = document.querySelector('#quotes-content');
 const vitalityContent = document.querySelector('#vitality-content');
 const ideasContent = document.querySelector('#ideas-content');
@@ -32,10 +32,10 @@ config = [
     mount: nowContent
   },
   {
-    selector: ethos,
-    title: 'Ethos',
+    selector: work,
+    title: 'Work',
     y: '15%',
-    mount: ethosContent
+    mount: workContent
   },
   {
     selector: quotes,
