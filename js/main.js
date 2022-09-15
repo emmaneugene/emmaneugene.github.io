@@ -33,7 +33,7 @@ config = [
   },
   {
     selector: work,
-    title: 'Work',
+    title: 'Working with me',
     y: '15%',
     mount: workContent
   },
