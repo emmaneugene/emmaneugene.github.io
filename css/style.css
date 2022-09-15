@@ -27,12 +27,12 @@ h1 {
 }
 
 h2 {
-  color: #fff;
+  color: var(--text-color);
   text-align: center;
 }
 
 h3 {
-  color:#38f838ad; 
+  color:#ccc; 
   margin-top: 10px;
   margin-bottom: 10px;
 }
