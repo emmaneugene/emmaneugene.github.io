@@ -2,7 +2,7 @@ const about = document.querySelector('#about');
 const now = document.querySelector('#now');
 const work = document.querySelector('#work');
 const quotes = document.querySelector('#quotes');
-const vitality = document.querySelector('#vitality');
+const coolStuff = document.querySelector('#cool-stuff');
 const ideas = document.querySelector('#ideas');
 const contact = document.querySelector('#contact');
 
@@ -11,7 +11,7 @@ const aboutContent = document.querySelector('#about-content');
 const nowContent = document.querySelector('#now-content');
 const workContent = document.querySelector('#work-content');
 const quotesContent = document.querySelector('#quotes-content');
-const vitalityContent = document.querySelector('#vitality-content');
+const coolStuffContent = document.querySelector('#cool-stuff-content');
 const ideasContent = document.querySelector('#ideas-content');
 const contactContent = document.querySelector('#contact-content');
 
@@ -44,10 +44,10 @@ config = [
     mount: quotesContent
   },
   {
-    selector: vitality,
-    title: 'Vitality',
+    selector: coolStuff,
+    title: 'Cool stuff',
     y: '25%',
-    mount: vitalityContent
+    mount: coolStuffContent
   },
   {
     selector: ideas,
