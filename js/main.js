@@ -20,42 +20,49 @@ const inactiveBgColor = '#777';
 
 config = [
   {
+    id: 'winbox-about',
     selector: about,
     title: 'About Me',
     y: '5%',
     mount: aboutContent
   },
   {
+    id: 'winbox-now',
     selector: now,
     title: 'Now',
     y: '10%',
     mount: nowContent
   },
   {
+    id: 'winbox-work',
     selector: work,
     title: 'Working with me',
     y: '15%',
     mount: workContent
   },
   {
+    id: 'winbox-quotes',
     selector: quotes,
     title: 'Quotes',
     y: '20%',
     mount: quotesContent
   },
   {
+    id: 'winbox-cool-stuff',
     selector: coolStuff,
     title: 'Cool stuff',
     y: '25%',
     mount: coolStuffContent
   },
   {
+    id: 'winbox-ideas',
     selector: ideas,
     title: 'Ideas',
     y: '30%',
     mount: ideasContent
   },
   {
+    id: 'winbox-contact',
     selector: contact,
     title: 'Contact',
     y: '35%',
@@ -65,7 +72,12 @@ config = [
 
 config.forEach(element => {
   element['selector'].addEventListener('click', () => {
+    if (document.getElementById(element['id'])) {
+      document.getElementById(element['id']).remove();
+    }
+
     const box = new WinBox({
+      id: element['id'],
       title: element['title'],
       width: '400px',
       height: '400px',
