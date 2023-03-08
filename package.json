@@ -4,7 +4,8 @@
   "description": "Files for my personal portfolio site, hosted on Github Pages with html, css and vanilla JS as well as the [WinBox](https://github.com/nextapps-de/winbox) library.",
   "main": "index.js",
   "scripts": {
-    "build": "uglifyjs js/main.js > js/main.min.js; minify css/style.css > css/style.min.css"
+    "build": "uglifyjs js/main.js > js/main.min.js; minify css/style.css > css/style.min.css",
+    "local": "live-server"
   },
   "repository": {
     "type": "git",
