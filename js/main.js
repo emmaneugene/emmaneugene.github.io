@@ -15,8 +15,26 @@ const coolStuffContent = document.querySelector('#cool-stuff-content');
 const ideasContent = document.querySelector('#ideas-content');
 const contactContent = document.querySelector('#contact-content');
 
-const activeBgColor = '#c28a11';
-const inactiveBgColor = '#777'
+const activeBgColor = '#000';
+const inactiveBgColor = '#777';
+
+const btn = document.querySelector(".btn-toggle");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+btn.addEventListener("click", function () {
+  if (prefersDarkScheme.matches) {
+    document.body.classList.toggle("light-theme");
+    var theme = document.body.classList.contains("light-theme")
+      ? "light"
+      : "dark";
+  } else {
+    document.body.classList.toggle("dark-theme");
+    var theme = document.body.classList.contains("dark-theme")
+      ? "dark"
+      : "light";
+  }
+  localStorage.setItem("theme", theme);
+});
+
 
 config = [
   {
