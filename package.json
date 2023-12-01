@@ -1,10 +1,10 @@
 {
   "name": "emmaneugene.github.io",
   "version": "1.0.0",
-  "description": "Files for my personal portfolio site, hosted on Github Pages with html, css and vanilla JS as well as the [WinBox](https://github.com/nextapps-de/winbox) library.",
+  "description": "Files for my personal website, hosted on Github Pages.",
   "main": "index.js",
   "scripts": {
-    "build": "uglifyjs js/main.js > js/main.min.js; minify css/style.css > css/style.min.css",
+    "format": "prettier --write .",
     "local": "live-server"
   },
   "repository": {

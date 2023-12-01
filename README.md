@@ -1,6 +1,6 @@
 # Personal website
 
-Files for my personal site, hosted on Github Pages. 
+Files for my personal site, hosted on Github Pages.
 
 ## Built with
 
