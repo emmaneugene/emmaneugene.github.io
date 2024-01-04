@@ -1,97 +1,78 @@
-const about = document.querySelector("#about");
-const now = document.querySelector("#now");
-const work = document.querySelector("#work");
-const quotes = document.querySelector("#quotes");
-const coolStuff = document.querySelector("#cool-stuff");
-const ideas = document.querySelector("#ideas");
-const contact = document.querySelector("#contact");
-
-const aboutContent = document.querySelector("#about-content");
-const nowContent = document.querySelector("#now-content");
-const workContent = document.querySelector("#work-content");
-const quotesContent = document.querySelector("#quotes-content");
-const coolStuffContent = document.querySelector("#cool-stuff-content");
-const ideasContent = document.querySelector("#ideas-content");
-const contactContent = document.querySelector("#contact-content");
-
-const activeBgColor = "#000";
-const inactiveBgColor = "#777";
-
 config = [
   {
     id: "winbox-about",
-    selector: about,
+    selector: document.querySelector("#about"),
     title: "About Me",
     y: "5%",
-    mount: aboutContent,
+    mount: document.querySelector("#about-content"),
   },
   {
     id: "winbox-now",
-    selector: now,
+    selector: document.querySelector("#now"),
     title: "Now",
     y: "10%",
-    mount: nowContent,
+    mount: document.querySelector("#now-content"),
   },
   {
     id: "winbox-work",
-    selector: work,
+    selector: document.querySelector("#work"),
     title: "Working with me",
     y: "15%",
-    mount: workContent,
+    mount: document.querySelector("#work-content"),
   },
   {
     id: "winbox-quotes",
-    selector: quotes,
+    selector: document.querySelector("#quotes"),
     title: "Quotes",
     y: "20%",
-    mount: quotesContent,
+    mount: document.querySelector("#quotes-content"),
   },
   {
     id: "winbox-cool-stuff",
-    selector: coolStuff,
+    selector: document.querySelector("#cool-stuff"),
     title: "Cool stuff",
     y: "25%",
-    mount: coolStuffContent,
+    mount: document.querySelector("#cool-stuff-content"),
   },
   {
-    id: "winbox-ideas",
-    selector: ideas,
-    title: "Ideas",
+    id: "winbox-topics",
+    selector: document.querySelector("#topics"),
+    title: "Topics",
     y: "30%",
-    mount: ideasContent,
+    mount: document.querySelector("#topics-content"),
   },
   {
     id: "winbox-contact",
-    selector: contact,
+    selector: document.querySelector("#contact"),
     title: "Contact",
     y: "35%",
-    mount: contactContent,
+    mount: document.querySelector("#contact-content"),
   },
 ];
 
-config.forEach((element) => {
-  element["selector"].addEventListener("click", () => {
-    if (document.getElementById(element["id"])) {
-      document.getElementById(element["id"]).remove();
+config.forEach((e) => {
+  e["selector"].addEventListener("click", () => {
+    if (document.getElementById(e["id"])) {
+      document.getElementById(e["id"]).remove();
     }
 
     const box = new WinBox({
-      id: element["id"],
-      title: element["title"],
+      id: e["id"],
+      title: e["title"],
       width: "400px",
       height: "400px",
       x: "5%",
-      y: element["y"],
+      y: e["y"],
       top: 50,
       right: 50,
       bottom: 50,
       left: 50,
-      mount: element["mount"],
+      mount: e["mount"],
       onfocus: function () {
-        this.setBackground(activeBgColor);
+        this.setBackground("#000");
       },
       onblur: function () {
-        this.setBackground(inactiveBgColor);
+        this.setBackground("#777");
       },
     });
   });
