@@ -7,10 +7,10 @@ const windowCfg = [
   { name: "links", title: "Links to cool stuff" },
   { name: "themes", title: "Themes that interest me" },
   { name: "contact", title: "Contact me" },
-]
+];
 let yPos = 5;
 
-windowCfg.forEach(cfg => {
+windowCfg.forEach((cfg) => {
   cfg.id = `winbox-${cfg.name}`;
   cfg.selector = document.querySelector(`#${cfg.name}`);
   cfg.y = `${yPos}%`;
@@ -42,4 +42,4 @@ windowCfg.forEach(cfg => {
   });
 
   yPos += 5;
-})
+});

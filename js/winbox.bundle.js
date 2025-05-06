@@ -139,9 +139,7 @@
     this.onshow = ra;
     this.dom.id = this.id = q || "winbox-" + ++aa;
     this.dom.className =
-      "winbox" +
-      (Q ? " " + ("string" === typeof Q ? Q : Q.join(" ")) : "") +
-      (f ? " modal" : "");
+      "winbox" + (Q ? " " + ("string" === typeof Q ? Q : Q.join(" ")) : "") + (f ? " modal" : "");
     this.dom.winbox = this;
     da ? this.maximize() : ca ? this.minimize() : this.move().resize();
     ea ? this.hide() : this.focus();
@@ -159,9 +157,7 @@
           ? (a = b - c)
           : ((c = parseFloat(a)),
             (a =
-              "%" === ("" + c !== a && a.substring(("" + c).length))
-                ? ((b / 100) * c) | 0
-                : c)));
+              "%" === ("" + c !== a && a.substring(("" + c).length)) ? ((b / 100) * c) | 0 : c)));
     return a;
   }
   function ba() {
@@ -173,9 +169,7 @@
       (H = "");
     L =
       H &&
-      H.replace("request", "exit")
-        .replace("mozRequest", "mozCancel")
-        .replace("Request", "Exit");
+      H.replace("request", "exit").replace("mozRequest", "mozCancel").replace("Request", "Exit");
     t(window, "resize", function () {
       U();
       V();
@@ -238,9 +232,7 @@
         (q = d.dom.getElementsByClassName("wb-title")[0]),
         (q = q.clientHeight),
         b[k] || (b[k] = 0),
-        d
-          .resize((h + 1) | 0, 0, !0)
-          .move((d.left + b[k] * h) | 0, R - d.bottom - q, !0),
+        d.resize((h + 1) | 0, 0, !0).move((d.left + b[k] * h) | 0, R - d.bottom - q, !0),
         b[k]++;
   }
   function W(a, b) {
@@ -285,18 +277,15 @@
         if ("e" === b || "se" === b || "ne" === b) {
           a.width += u;
           var v = 1;
-        } else if ("w" === b || "sw" === b || "nw" === b)
-          (a.x += u), (a.width -= u), (r = v = 1);
+        } else if ("w" === b || "sw" === b || "nw" === b) (a.x += u), (a.width -= u), (r = v = 1);
         if ("s" === b || "se" === b || "sw" === b) {
           a.height += D;
           var w = 1;
-        } else if ("n" === b || "ne" === b || "nw" === b)
-          (a.y += D), (a.height -= D), (n = w = 1);
+        } else if ("n" === b || "ne" === b || "nw" === b) (a.y += D), (a.height -= D), (n = w = 1);
       }
       if (v || w)
         v && (a.width = Math.max(Math.min(a.width, P - a.x - a.right), a.i)),
-          w &&
-            (a.height = Math.max(Math.min(a.height, R - a.y - a.bottom), a.h)),
+          w && (a.height = Math.max(Math.min(a.height, R - a.y - a.bottom), a.h)),
           a.resize();
       if (r || n)
         r && (a.x = Math.max(Math.min(a.x, P - a.width - a.right), a.left)),
@@ -371,27 +360,18 @@
   e.blur = function (a) {
     if (!1 === a) return this.focus();
     G === this &&
-      (this.removeClass("focus"),
-      (this.focused = !1),
-      this.onblur && this.onblur(),
-      (G = null));
+      (this.removeClass("focus"), (this.focused = !1), this.onblur && this.onblur(), (G = null));
     return this;
   };
   e.hide = function (a) {
     if (!1 === a) return this.show();
     if (!this.hidden)
-      return (
-        this.onhide && this.onhide(), (this.hidden = !0), this.addClass("hide")
-      );
+      return this.onhide && this.onhide(), (this.hidden = !0), this.addClass("hide");
   };
   e.show = function (a) {
     if (!1 === a) return this.hide();
     if (this.hidden)
-      return (
-        this.onshow && this.onshow(),
-        (this.hidden = !1),
-        this.removeClass("hide")
-      );
+      return this.onshow && this.onshow(), (this.hidden = !1), this.removeClass("hide");
   };
   e.minimize = function (a) {
     if (!1 === a) return this.restore();
@@ -408,10 +388,7 @@
   };
   e.restore = function () {
     F && Z();
-    this.min &&
-      (X(this),
-      this.resize().move().focus(),
-      this.onrestore && this.onrestore());
+    this.min && (X(this), this.resize().move().focus(), this.onrestore && this.onrestore());
     this.max &&
       ((this.max = !1),
       this.removeClass("max").resize().move().focus(),
@@ -433,10 +410,7 @@
   e.fullscreen = function (a) {
     this.min && (X(this), this.resize().move());
     if (!F || !Z())
-      this.body[H](),
-        (F = this),
-        (this.full = !0),
-        this.onfullscreen && this.onfullscreen();
+      this.body[H](), (F = this), (this.full = !0), this.onfullscreen && this.onfullscreen();
     else if (!1 === a) return this.restore();
     return this;
   };
@@ -489,9 +463,7 @@
     return this;
   };
   e.toggleClass = function (a) {
-    return this.dom.classList.contains(a)
-      ? this.removeClass(a)
-      : this.addClass(a);
+    return this.dom.classList.contains(a) ? this.removeClass(a) : this.addClass(a);
   };
   window.WinBox = S;
 }).call(this);
