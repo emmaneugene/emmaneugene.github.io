@@ -1,6 +1,6 @@
 # Personal website
 
-Files for my personal site, written with plain HTML/CSS/JS and the [WinBox](https://github.com/nextapps-de/winbox)library.
+Files for my personal site, written with plain HTML/CSS/JS and the [WinBox](https://github.com/nextapps-de/winbox) library.
 
 ## Preview
 
@@ -15,7 +15,7 @@ Clone this repo and serve it locally with [live-server](https://www.npmjs.com/pa
 # Serve (defaults to port 8080, modify with --port=<PORT>)
 live-server
 
-# Format (applies HTML, CSS and JS)
+# Format (applies to HTML, CSS and JS)
 prettier --write .
 
 ```
