@@ -10,15 +10,33 @@ const windowCfg = [
 ];
 let yPos = 5;
 
+async function loadContent(section) {
+  try {
+    const response = await fetch(`/content/${section}.md`);
+    if (!response.ok) {
+      throw new Error(`Failed to load ${section}.md`);
+    }
+    const markdown = await response.text();
+    return marked.parse(markdown);
+  } catch (error) {
+    console.error(`Error loading content for ${section}:`, error);
+    return `<h2>Error loading content</h2><p>Could not load ${section} content.</p>`;
+  }
+}
+
 windowCfg.forEach((cfg) => {
   cfg.id = `winbox-${cfg.name}`;
   cfg.selector = document.querySelector(`#${cfg.name}`);
   cfg.y = `${yPos}%`;
-  cfg.mount = document.querySelector(`#${cfg.name}-content`);
-  cfg.selector.addEventListener("click", () => {
+
+  cfg.selector.addEventListener("click", async () => {
     if (document.getElementById(cfg.id)) {
       document.getElementById(cfg.id).remove();
     }
+
+    const contentDiv = document.createElement("div");
+    contentDiv.innerHTML = await loadContent(cfg.name);
+    contentDiv.className = "wb-body";
 
     const box = new WinBox({
       id: cfg.id,
@@ -31,7 +49,7 @@ windowCfg.forEach((cfg) => {
       right: 50,
       bottom: 50,
       left: 50,
-      mount: cfg.mount,
+      mount: contentDiv,
       onfocus: function () {
         this.setBackground("#000");
       },
