@@ -1,4 +1,4 @@
-## work:|
+## work:
 
 Inspired by Den Delimarsky's '[How I work](https://den.dev/how-i-work)':
 

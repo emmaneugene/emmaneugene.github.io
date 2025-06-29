@@ -1,4 +1,4 @@
-## uses:|
+## uses:
 
 Because well, why not:
 

@@ -1,4 +1,4 @@
-## links:|
+## links:
 
 A little contrived, but here are some of the [cool sites](https://maggieappleton.com/garden-history) I've come across:
 

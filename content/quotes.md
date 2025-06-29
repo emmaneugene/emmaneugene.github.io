@@ -1,4 +1,4 @@
-## quotes:|
+## quotes:
 
 As clichéd as they may seem, I think [quotes](http://quotes.cat-v.org/) serve as valuable reminders in daily life. Here are some of my personal favorites (and a small selection of poem snippets):
 
