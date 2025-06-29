@@ -11,10 +11,10 @@ Source files and assets for my personal site, written in plain HTML/CSS/JS with 
 Clone this repo and serve it locally with [live-server](https://www.npmjs.com/package/live-server). Optionally run formatting with [prettier](https://www.npmjs.com/package/prettier)
 
 ```bash
-# Serve (defaults to port 8080, modify with --port=<PORT>)
+# Serve (defaults to port 8080)
 live-server
 
-# Format (applies to HTML, CSS and JS)
+# Format
 prettier --write .
 ```
 
