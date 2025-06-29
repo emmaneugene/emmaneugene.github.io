@@ -8,7 +8,8 @@ const windowCfg = [
   { name: "themes", title: "Themes that interest me" },
   { name: "contact", title: "Contact me" },
 ];
-let yPos = 5;
+let xPos = 5;
+const isMobile = window.innerWidth <= 768;
 
 async function loadContent(section) {
   try {
@@ -27,7 +28,7 @@ async function loadContent(section) {
 windowCfg.forEach((cfg) => {
   cfg.id = `winbox-${cfg.name}`;
   cfg.selector = document.querySelector(`#${cfg.name}`);
-  cfg.y = `${yPos}%`;
+  cfg.x = `${xPos}%`;
 
   cfg.selector.addEventListener("click", async () => {
     if (document.getElementById(cfg.id)) {
@@ -38,17 +39,10 @@ windowCfg.forEach((cfg) => {
     contentDiv.innerHTML = await loadContent(cfg.name);
     contentDiv.className = "wb-body";
 
-    const box = new WinBox({
+    // Set position based on device type
+    const windowConfig = {
       id: cfg.id,
       title: cfg.title,
-      width: "400px",
-      height: "400px",
-      x: "5%",
-      y: cfg.y,
-      top: 50,
-      right: 50,
-      bottom: 50,
-      left: 50,
       mount: contentDiv,
       onfocus: function () {
         this.setBackground("#000");
@@ -56,8 +50,26 @@ windowCfg.forEach((cfg) => {
       onblur: function () {
         this.setBackground("#777");
       },
-    });
+    };
+
+    if (isMobile) {
+      windowConfig.width = "95%";
+      windowConfig.height = "80%";
+      windowConfig.x = "center";
+      windowConfig.y = "center";
+    } else {
+      windowConfig.width = "40%";
+      windowConfig.height = "80%";
+      windowConfig.x = cfg.x;
+      windowConfig.y = "20%";
+      windowConfig.top = 50;
+      windowConfig.right = 50;
+      windowConfig.bottom = 50;
+      windowConfig.left = 50;
+    }
+
+    new WinBox(windowConfig);
   });
 
-  yPos += 5;
+  xPos += 8;
 });
