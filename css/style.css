@@ -35,7 +35,8 @@
   --active-bg-color: #333;
 }
 
-body.light-theme {
+body {
+  background: var(--bkg-color);
   --header-text-color: #2d760c;
   --bkg-color: #fff;
   --text-color: #333;
@@ -45,10 +46,6 @@ body.dark-theme {
   --header-text-color: #c28a11;
   --bkg-color: #333;
   --text-color: #ccc;
-}
-
-body {
-  background: var(--bkg-color);
 }
 
 h1 {
@@ -97,13 +94,6 @@ nav ul {
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  nav ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .main-text {
   font-size: 18px;
 }
@@ -132,17 +122,6 @@ nav ul li {
 .cursor {
   font-weight: 700;
   animation: 1s blink step-end infinite;
-}
-
-@keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-
-  50% {
-    color: var(--header-text-color);
-  }
 }
 
 .theme-toggle {
@@ -183,4 +162,22 @@ body.dark-theme .theme-icon-light {
 
 body.dark-theme .theme-icon-dark {
   display: inline;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: var(--header-text-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
