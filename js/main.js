@@ -42,6 +42,7 @@ windowCfg.forEach((cfg) => {
     // Set position based on device type
     const windowConfig = {
       id: cfg.id,
+      index: 1000,
       title: cfg.title,
       mount: contentDiv,
       onfocus: function () {
