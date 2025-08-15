@@ -17,8 +17,7 @@ async function loadContent(section) {
     if (!response.ok) {
       throw new Error(`Failed to load ${section}.md`);
     }
-    const markdown = await response.text();
-    return marked.parse(markdown);
+    return marked.parse(await response.text());
   } catch (error) {
     console.error(`Error loading content for ${section}:`, error);
     return `<h2>Error loading content</h2><p>Could not load ${section} content.</p>`;

@@ -1,0 +1,14 @@
+{
+  "name": "emmaneugene",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "scripts": {
+    "format": "prettier --write .",
+    "dev": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.6.2"
+  }
+}

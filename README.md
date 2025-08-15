@@ -8,14 +8,12 @@ Source files and assets for my personal site, written in plain HTML/CSS/JS with 
 
 ## Local development
 
-Clone this repo and serve it locally with [live-server](https://www.npmjs.com/package/live-server). Optionally run formatting with [prettier](https://www.npmjs.com/package/prettier)
-
 ```bash
-# Serve (defaults to port 8080)
-live-server
+# Serve with live-server (defaults to port 8080)
+npm run dev
 
-# Format
-prettier --write .
+# Format with prettier
+npm run format
 ```
 
 ## Credits

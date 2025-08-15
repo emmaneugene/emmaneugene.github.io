@@ -166,7 +166,7 @@
     this.onhide = Aa;
     this.onshow = Ba;
     I ? this.hide() : this.focus();
-    if (d || 0 === d) (this.index = d), u(this.g, "z-index", d), d > E && (E = d);
+    if (d || 0 === d) ((this.index = d), u(this.g, "z-index", d), d > E && (E = d));
     H ? this.maximize() : G ? this.minimize() : this.resize().move();
     ka(this);
     (n || B).appendChild(this.g);
@@ -282,14 +282,14 @@
   }
   function oa() {
     for (var a = x.length, b = {}, c = {}, f = 0, d; f < a; f++)
-      (d = x[f]), (d = d.left + ":" + d.top), c[d] ? c[d]++ : ((b[d] = 0), (c[d] = 1));
+      ((d = x[f]), (d = d.left + ":" + d.top), c[d] ? c[d]++ : ((b[d] = 0), (c[d] = 1)));
     f = 0;
     for (var n, p; f < a; f++)
-      (d = x[f]),
+      ((d = x[f]),
         (n = d.left + ":" + d.top),
         (p = Math.min((K - d.left - d.right) / c[n], 250)),
         d.resize((p + 1) | 0, d.h, !0).move((d.left + b[n] * p) | 0, P - d.bottom - d.h, !0),
-        b[n]++;
+        b[n]++);
   }
   function W(a, b) {
     function c(g) {
@@ -339,11 +339,12 @@
         if ("e" === b || "se" === b || "ne" === b) {
           a.width += r;
           var H = 1;
-        } else if ("w" === b || "sw" === b || "nw" === b) (a.x += r), (a.width -= r), (G = H = 1);
+        } else if ("w" === b || "sw" === b || "nw" === b) ((a.x += r), (a.width -= r), (G = H = 1));
         if ("s" === b || "se" === b || "sw" === b) {
           a.height += w;
           var I = 1;
-        } else if ("n" === b || "ne" === b || "nw" === b) (a.y += w), (a.height -= w), (D = I = 1);
+        } else if ("n" === b || "ne" === b || "nw" === b)
+          ((a.y += w), (a.height -= w), (D = I = 1));
       }
       H &&
         ((a.width = Math.max(Math.min(a.width, a.m, K - a.x - a.right), a.s)), (H = a.width !== C));
@@ -365,7 +366,7 @@
         (a.max && (a.y = a.top + w),
         (a.y = Math.max(Math.min(a.y, a.j ? P - a.h : P - a.height - a.bottom), a.top)),
         (D = a.y !== ea));
-      if (G || D) a.max && a.restore(), a.move();
+      if (G || D) (a.max && a.restore(), a.move());
       if (H || G) v = q;
       if (I || D) L = g;
     }
@@ -460,12 +461,12 @@
   e.hide = function (a) {
     if (!1 === a) return this.show();
     if (!this.hidden)
-      return this.onhide && this.onhide(), (this.hidden = !0), this.addClass("hide");
+      return (this.onhide && this.onhide(), (this.hidden = !0), this.addClass("hide"));
   };
   e.show = function (a) {
     if (!1 === a) return this.hide();
     if (this.hidden)
-      return this.onshow && this.onshow(), (this.hidden = !1), this.removeClass("hide");
+      return (this.onshow && this.onshow(), (this.hidden = !1), this.removeClass("hide"));
   };
   e.minimize = function (a) {
     if (!1 === a) return this.restore();
@@ -516,7 +517,7 @@
   e.fullscreen = function (a) {
     this.min && (pa(this), this.resize().move());
     if (!F || !qa())
-      this.body[J](), (F = this), (this.full = !0), this.onfullscreen && this.onfullscreen();
+      (this.body[J](), (F = this), (this.full = !0), this.onfullscreen && this.onfullscreen());
     else if (!1 === a) return this.restore();
     return this;
   };
@@ -528,7 +529,7 @@
       document.webkitFullscreenElement ||
       document.mozFullScreenElement
     )
-      return document[ha](), !0;
+      return (document[ha](), !0);
   }
   e.close = function (a) {
     if (this.onclose && this.onclose(a)) return !0;
