@@ -2,7 +2,7 @@
 
 Hi! My name is Emmanuel. I've gone by a few nicknames, but most people call me 'Emman'.
 
-![profile picture](/assets/profile.jpg)
+![profile picture](/assets/profile.png)
 
 I love solving problems, asking hard questions, and tinkering. I'm looking to use my skills to work in high-impact roles tackling challenging engineering problems in an open, collaborative context.
 
