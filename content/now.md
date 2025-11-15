@@ -2,12 +2,10 @@
 
 A brief [summary](https://nownownow.com/about) of what's going for me at the moment:
 
-- \- Working as a backend engineer on Shopee's Data Infrastructure team.
+- \- Working as a software engineer on Shopee's Data Infrastructure team.
 
-- \- Setting up a homelab and private network with [Tailscale](https://tailscale.com).
+- \- Learning C programming for fun, starting with the classic K&R
 
-- \- Experimenting with self-hosted AI projects on Apple Silicon.
+- \- Using Claude for loads of side projects
 
-- \- Setting up a writing system for a dev blog.
-
-Last updated on: **28-06-2025**
+Last updated on: **15-11-2025**
