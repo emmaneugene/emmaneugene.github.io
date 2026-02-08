@@ -1,3 +1,5 @@
+const BASE_PATH = new URL(".", document.currentScript.src).pathname.replace(/js\/$/, "");
+
 const windowCfg = [
   { name: "about", title: "About me" },
   { name: "now", title: "What I'm doing now" },
@@ -13,7 +15,7 @@ const isMobile = window.innerWidth <= 768;
 
 async function loadContent(section) {
   try {
-    const response = await fetch(`/content/${section}.md`);
+    const response = await fetch(`${BASE_PATH}content/${section}.md`);
     if (!response.ok) {
       throw new Error(`Failed to load ${section}.md`);
     }
