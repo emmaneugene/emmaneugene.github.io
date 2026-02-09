@@ -6,7 +6,6 @@ const windowCfg = [
   { name: "uses", title: "Things I use" },
   { name: "quotes", title: "Quotes and snippets" },
   { name: "links", title: "Links to cool stuff" },
-  { name: "contact", title: "Contact me" },
 ];
 let xPos = 5;
 const isMobile = window.innerWidth <= 768;

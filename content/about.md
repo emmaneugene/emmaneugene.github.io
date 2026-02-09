@@ -19,3 +19,5 @@ While I can't say I have the necessary experience, these are some problem areas 
 **Robotics**: Software on its own is complex, but we've barely scratched the surface in terms of how it can interact with the real world. I believe that [nature-inspired](https://en.wikipedia.org/wiki/Biomimetics) robots will be crucial for us to flourish in a changing world, and it's a space I'd like to learn more about.
 
 **Public health**: Implementing policies that target low-hanging fruit and make the most impact for community-level health outcomes - I believe there's a lot of missed value in quantifying the impact of environmental influences like noise and [air pollution](https://patrickcollison.com/pollution), expanding green spaces (see: [solarpunk](https://www.youtube.com/watch?v=UqJJktxCY9U)), and improving nutrition and sleep as pre-emptive health interventions.
+
+If you'd like reach me, emmaneugene[at]gmail.com is the best way to get in touch
