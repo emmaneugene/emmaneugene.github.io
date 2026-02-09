@@ -109,6 +109,10 @@ nav ul li {
   padding: 3rem;
 }
 
+.winbox .wb-title {
+  font-family: "Fira Mono", monospace;
+}
+
 .wb-body {
   background: var(--bkg-color);
   color: var(--text-color);

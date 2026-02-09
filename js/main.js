@@ -29,9 +29,16 @@ windowCfg.forEach((cfg) => {
   cfg.selector = document.querySelector(`#${cfg.name}`);
   cfg.x = `${xPos}%`;
 
+  cfg.instance = null;
+
   cfg.selector.addEventListener("click", async () => {
-    if (document.getElementById(cfg.id)) {
-      document.getElementById(cfg.id).remove();
+    // If the window already exists, restore if minimized and bring to front
+    if (cfg.instance) {
+      if (cfg.instance.min) {
+        cfg.instance.restore();
+      }
+      cfg.instance.focus();
+      return;
     }
 
     const contentDiv = document.createElement("div");
@@ -49,6 +56,9 @@ windowCfg.forEach((cfg) => {
       },
       onblur: function () {
         this.setBackground("#777");
+      },
+      onclose: function () {
+        cfg.instance = null;
       },
     };
 
@@ -68,7 +78,7 @@ windowCfg.forEach((cfg) => {
       windowConfig.left = 50;
     }
 
-    new WinBox(windowConfig);
+    cfg.instance = new WinBox(windowConfig);
   });
 
   xPos += 8;
