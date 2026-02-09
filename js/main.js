@@ -4,10 +4,8 @@ const windowCfg = [
   { name: "about", title: "About me" },
   { name: "now", title: "What I'm doing now" },
   { name: "uses", title: "Things I use" },
-  { name: "work", title: "Working with me" },
   { name: "quotes", title: "Quotes and snippets" },
   { name: "links", title: "Links to cool stuff" },
-  { name: "themes", title: "Themes that interest me" },
   { name: "contact", title: "Contact me" },
 ];
 let xPos = 5;
