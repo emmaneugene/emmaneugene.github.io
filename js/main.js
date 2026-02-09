@@ -7,8 +7,11 @@ const windowCfg = [
   { name: "quotes", title: "Quotes and snippets" },
   { name: "links", title: "Links to cool stuff" },
 ];
-let xPos = 5;
 const isMobile = window.innerWidth <= 768;
+const X_START = 5;
+const X_END = 45;
+const xStep =
+  windowCfg.length > 1 ? (X_END - X_START) / (windowCfg.length - 1) : 0;
 
 async function loadContent(section) {
   try {
@@ -23,10 +26,10 @@ async function loadContent(section) {
   }
 }
 
-windowCfg.forEach((cfg) => {
+windowCfg.forEach((cfg, index) => {
   cfg.id = `winbox-${cfg.name}`;
   cfg.selector = document.querySelector(`#${cfg.name}`);
-  cfg.x = `${xPos}%`;
+  cfg.x = `${X_START + index * xStep}%`;
 
   cfg.instance = null;
 
@@ -80,7 +83,6 @@ windowCfg.forEach((cfg) => {
     cfg.instance = new WinBox(windowConfig);
   });
 
-  xPos += 8;
 });
 
 function initThemeToggle() {
