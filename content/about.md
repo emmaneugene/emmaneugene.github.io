@@ -10,7 +10,7 @@ I am an [impatient optimist](https://web.archive.org/web/20230408002619/https://
 
 I'm interested in building software systems that are robust, scalable, secure and performant, and making those concepts as accessible as possible. To that end, I share my knowledge through writing, teaching, and volunteering opportunities wherever possible.
 
-While I can't say I have the necessary experience, these are some problem areas I'd like to devote time and/or resources into solving:
+While I can't say I have the necessary experience, these are some problem areas I'd like to devote time and/or resources to addressing:
 
 **Energy**: Energy powers everything that we do, and our biggest challenge is to provide clean, reliable sources to meet humanity's needs as soon as possible. Renewables like solar and wind are in many cases already cheaper than fossil fuels, but we desperately need innovation in many more areas to get to a future where energy is abundant and carbon-neutral.
 
