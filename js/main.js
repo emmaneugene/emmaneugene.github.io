@@ -1,6 +1,6 @@
 const BASE_PATH = new URL(".", document.currentScript.src).pathname.replace(/js\/$/, "");
 
-const WB_FOCUS_COLOR = "#000";
+const WB_FOCUS_COLOR = "var(--header-text-color)";
 const WB_BLUR_COLOR = "#777";
 const X_START = 5;
 const X_END = 45;
