@@ -10,7 +10,6 @@ const windowCfg = [
   { name: "now", title: "What I'm doing now" },
   { name: "uses", title: "Things I use" },
   { name: "quotes", title: "Quotes and snippets" },
-  { name: "links", title: "Links to cool stuff" },
 ];
 
 const isMobile = window.innerWidth <= 768;

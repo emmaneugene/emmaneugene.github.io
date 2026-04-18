@@ -1,6 +1,6 @@
 ## about me:
 
-Hi! My name is Emmanuel. I've gone by a few nicknames, but most people call me 'Emman'.
+Hi! My name is Emmanuel. I've gone by a few nicknames, but most people call me Emman.
 
 ![profile picture](/assets/profile.png)
 

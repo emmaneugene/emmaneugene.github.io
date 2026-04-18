@@ -13,14 +13,14 @@ Because well, why not:
 
 ### Software
 
-- \- **Browser**: Firefox, Chromium
+- \- **Browser**: Zen, Helium
 - \- **Cloud storage**: Dropbox, Google Drive, iCloud
-- \- **IDE**: JetBrains IDEs (for work), VSCode, Neovim
+- \- **IDE**: Zed, Neovim
 - \- **Notes**: Obsidian, Notion, Telegram channels (instant sync everywhere!)
-- \- **Package manager**: Homebrew
+- \- **Package management**: Homebrew
 - \- **Password manager**: Bitwarden, Apple passwords
 - \- **Reading**: NetNewsWire
 - \- **Shell**: zsh
-- \- **Terminal**: Ghostty + tmux
+- \- **Terminal**: Ghostty, Warp
 
 (Dotfiles and more available on [Github](https://github.com/emmaneugene/dotfiles))
